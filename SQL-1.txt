@@ -1,0 +1,33 @@
+SELECT * FROM employees;
+
+# Show suppliers from Germany
+# Show all the columns in suppliers table where country = germany
+select * From suppliers WHERE Country = 'germany';
+
+# Show all the records from customers table where coustomerID = 1
+SELECT * FROM customers WHERE CustomerID = 1;
+
+# Query: Show all the customers details where customerID > 80
+SELECT * FROM customers WHERE CustomerID > 80;
+
+# Use UNIQUE to show all unique countries from suppliers table
+SELECT DISTINCT country FROM suppliers;
+
+# count the total distict countries in the supplier table
+SELECT COUNT(DISTINCT  country) FROM suppliers;
+
+# Counting all the records
+SELECT COUNT(country) FROM suppliers;
+
+# Show customers sorted by name in the customers table
+SELECT * FROM customers ORDER BY CustomerName;
+
+# Show customers details first sorted ny country then customername
+SELECT * FROM customers ORDER BY Country, CustomerName;
+
+# show all the records in descending order based upon Quantity in the order_details table.
+SELECT * FROM order_details ORDER BY Quantity DESC;
+
+# Use LIMIT to show first 5 records in the customers table
+SELECT * FROM customers LIMIT 10;
+
