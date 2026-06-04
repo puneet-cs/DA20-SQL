@@ -1,0 +1,75 @@
+# DDL (Data Definition Language)
+# Creating and Changing the structure of table
+
+
+# 1. Creating the Data Base
+CREATE DATABASE College;
+
+# to use college database
+USE College;
+
+# creating table inside the database
+CREATE TABLE Canteen (ItemID int, Price int, ItemName varchar(30));
+
+# create Student table with columns Rollno, Name, Address
+CREATE TABLE student(Rollno int, Name varchar(50), Address varchar(100));
+
+# IF NOT EXISTS will create the table if table don't exist 
+# But if table exist then it will just show the Warning.
+CREATE TABLE IF NOT EXISTS student(Rollno int, Name varchar(50), Address varchar(100));
+
+# Create a Faculty table using CREATE TABLE IF NOT EXISTS with columns FacultyID, FacultyName, Subject
+CREATE TABLE IF NOT EXISTS faculty(facultyID INT, facultyName Varchar(40), Subject varchar(20));
+
+# Add a new column marks inside the student table 
+ALTER TABLE student ADD marks int;
+
+# ADD 2 columns No_seats, Rating in the canteen table
+ALTER TABLE canteen ADD (No_seats int, Rating int);
+
+# Modify the datatype of price column from int to float 
+ALTER TABLE canteen MODIFY Price FLOAT;
+
+# Rename column in student table: Name -> Peru
+ALTER TABLE student RENAME COLUMN Name TO Peru;
+
+# Delete or Drop the column
+ALTER TABLE student DROP COLUMN marks;
+
+# Reanme the table canteen -> "BhojanShala"
+RENAME TABLE canteen TO bhojanshala;
+
+# Truncate/delete all the records 
+TRUNCATE TABLE faculty;
+
+# DROP table completely
+DROP TABLE faculty;
+
+DROP TABLE IF EXISTS faculty;
+
+# Delete / DROP the database
+DROP DATABASE college;
+
+# Data Manipulation Language
+
+# Insert operation
+
+# Query-1: Create a new database with name Tollywood
+CREATE DATABASE tollywood;
+
+USE tollywood;
+
+# Create a table "Heronies" inside the tollywood databse
+# Name, City, Age, fee
+
+CREATE TABLE heronies (Name varchar(30), City varchar(20), Age INT, fee INT);
+
+# Insert records inside the table
+INSERT INTO heronies VALUES ('Kajal', 'HYD', 40, 10);
+
+SELECT * FROM heronies;
+
+INSERT INTO heronies VALUES ('Sai Pallavi', 'CHK', 20, 500),
+							('Mrunal', 'MBI', 35, 5);
+
+
