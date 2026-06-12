@@ -1,0 +1,43 @@
+CREATE TABLE Marriage(
+
+CandidateID INT PRIMARY KEY,
+Name VARCHAR(30),
+Age INT,
+Profession VARCHAR(30),
+Salary INT,
+CookingSkill VARCHAR(20),
+RelationshipStatus VARCHAR(20),
+MarriageType VARCHAR(20),
+MobileNo VARCHAR(20)
+
+);
+
+INSERT INTO Marriage VALUES
+(1,'Rahul',28,'Engineer',90000,'Poor',
+'Single','Love Marriage','9876543210'),
+
+(2,'Pooja',26,'Doctor',120000,'Excellent',
+'Single','Arrange Marriage','9871111111'),
+
+(3,'Bunty',30,'Youtuber',50000,'Terrible',
+'Rejected','Searching','9872222222'),
+
+(4,'Babli',25,'Teacher',45000,'Good',
+'Single','Love Marriage','9873333333'),
+
+(5,'Chintu',31,'Businessman',150000,'Excellent',
+'Complicated','Arrange Marriage','9874444444');
+
+
+CREATE TABLE FamilyDetails(
+CandidateID INT,
+FamilyType VARCHAR(20),
+House VARCHAR(20)
+);
+
+INSERT INTO FamilyDetails VALUES
+(1,'Joint','3 Floor'),
+(2,'Nuclear','Villa'),
+(3,'Joint','Rented'),
+(4,'Joint','Own'),
+(5,'Nuclear','Bungalow');
